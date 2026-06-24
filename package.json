@@ -1,0 +1,37 @@
+{
+  "name": "mcp-enterprise-managed-auth",
+  "version": "0.1.0",
+  "description": "POC: MCP Enterprise-Managed Authorization (ID-JAG) — enterprise IdP-driven access control via OAuth 2.0 token exchange",
+  "private": true,
+  "scripts": {
+    "install:idp": "cd src/mock-idp && npm install",
+    "install:server": "cd src/mcp-server && npm install",
+    "install:client": "cd src/mcp-client && npm install",
+    "install:all": "npm install && npm run install:idp && npm run install:server && npm run install:client",
+    "start:idp": "cd src/mock-idp && node index.js",
+    "start:server": "cd src/mcp-server && node index.js",
+    "start:client": "cd src/mcp-client && node index.js",
+    "dev": "concurrently \"npm run start:idp\" \"npm run start:server\" \"npm run start:client\"",
+    "demo": "cd src/mcp-client && node index.js demo"
+  },
+  "keywords": [
+    "mcp",
+    "oauth",
+    "id-jag",
+    "token-exchange",
+    "rfc8693",
+    "rfc7523",
+    "entra",
+    "enterprise-managed-authorization",
+    "model-context-protocol"
+  ],
+  "author": "starman69",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "jose": "^5.9.6"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

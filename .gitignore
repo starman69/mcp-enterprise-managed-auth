@@ -1,0 +1,17 @@
+node_modules/
+dist/
+build/
+coverage/
+
+.env
+*.pem
+*.key
+
+*.log
+.DS_Store
+
+.claude/
+.playwright-mcp/
+.mcp.json
+CLAUDE.md
+

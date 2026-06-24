@@ -1,0 +1,12 @@
+{
+  "name": "mcp-ema-mock-idp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Mock enterprise IdP: OIDC login + RFC 8693 token exchange that mints ID-JAGs",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.2.1",
+    "jose": "^5.9.6"
+  }
+}
